@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>DBX Component Demos</title>
+        <!-- We get both Chooser and Embedder functionality from the "drop in" SDK in the snippet -->
+        <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="oyntl3uf6didmij"></script>       
+    </head>
+    <body>
+        <h1>Dropbox Component Demos</h1></hq>
+        <hr>
+        <h2>Component: Chooser</h2>
+        <div id="chooserContainer"></div>
+        <pre id="chosenFile"></pre>
+        <hr>
+
+        <div id="addFileMember">
+            <h2>API: Add member to Dropbox file</h2>
+            <form method="POST" action="/add-file-member">
+                <label for="fileId">Target file id</label>
+                <input type="text" name="fileId" />
+                <label for="targetUser">User to add</label>
+                <input type="text" name="targetUser" />
+                <input type="submit" />
+            </form>
+        </div>
+        <hr>
+
+        <h2>Component: File and Folder Embed</h2>
+        <p>Paste a shared link to a Dropbox file or folder and press the button to generate an embedded preview.</p>
+        <label for="sharedLink">Dropbox shared link:</label>
+        <input type="text" id="userSharedLink"/>
+        <button id="embedButton">Embed shared link</button>
+        <hr>
+        <div id="embedContainer"></div>
+
+        <script src="custom.js"></script>
+    </body>
+</html>   
